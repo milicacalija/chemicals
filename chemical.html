@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Jquery za animacije sa efektom, da scroll kroz stranicu ili s leva na desno-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+
+
+    <div id="nav"> <!--Pocetak navbar, tzv header,-->
+        
+        <div class="container">
+
+            
+                <address>  <img src="mail.png" alt="slika-mail"> <a href="mailto:chemical@distribution.com">  <span class="address" >  chemicals@chemistry.com  </span> </a> 
+                </br>
+              <img src="phone.png" alt="slika-phone">   <a href="tel:+381659600516">
+                  <span class="address" > +381 65 9600 516  </span>   </a> </address>
+          
+
+
+
+
+          
+            
+                
+            <div class="dropdown"><!--Pocetak dropdown menija Kompanije -->
+                <button class="dropbtn"><a href="kompanije.html">Kompanije </a></button>
+                <div class="dropdown-content"> <!--Pocetak kontenta u okviru dugmeta kompanije-->
+                   <button  onclick="generateReport()"> O nama</button>
+                        <!--Zelim kad se klikne na link da skroluje na istoj stranici, to se postize efekat jquery-->
+                      
+                        <button onclick="generateReport2()"> Vizija i misija</button>
+                        <button onclick="generateReport3()"> Karijera</button>
+                    
+
+
+
+                </div> <!--Kraj diva kontent kompanije -->
+
+            </div> <!--Kraj diva dugme kompanije-->
+
+            <div class="dropdown"> <!---Pocetak dropdown menija Proizvodi--->
+                <button class="dropbtn"><a href="proizvodi.html">Proizvodi </a> </button>
+                <div class="dropdown-content"> <!--Pocetak content u okviru dugme proizvodi-->
+
+                    <ul class="a">
+                        <li><a href="#">Organske supstance </a> </li>
+                        <ul class="a">
+                            <li><a href="#">Čvrste organske supstance </a> </li>
+                            <li><a href="#">Organski rastvarači </a> </li>
+                            <li><a href="#"> Polimeri </a> </li>
+                            <li><a href="#">Bioproizvodi </a> </li>
+                        </ul> <!--Zatvori se lista organskie supstance-->
+                        <li><a href="#">Neorganske supstance </a></li>
+
+
+                        <ul class="a">
+
+
+                            <li><a href="#">Nemetali </a> </li>
+                            <li><a href="#">Čvrste neorganske supstance </a> </li>
+                            <li><a href="#">Neorganski rastvarači </a> </li>
+                        </ul> <!--Zatvori se lista neorganske supstance-->
+                    </ul> <!--Zatvori se glavna lista organske i neorganske supstance-->
+
+                </div> <!--Kraj diva kontent proizvodi -->
+            </div> <!--Kraj diva dugme proizvodi-->
+
+
+            <div class="dropdown"> <!---Pocetak dropdown menija Primena--->
+                <button class="dropbtn"> <a href="primena.html"> Primena</a></button>
+                <div class="dropdown-content"> <!---Pocetak dropdown contenta Primena--->
+
+                    <ul class="a"> <!--Pocetak glavne liste u okviru contenta primena-->
+                        <li><a href="#">Laka hemijska industrija </a> </li>
+
+                        <ul class="a"> <!--Pocetak liste u okviru contenta Laka industrija-->
+
+                            <li><a href="farmacija.html">Farmacija </a> </li>
+                            <li><a href="kozmetika.html">Kozmetika </a> </li>
+
+                        </ul> <!--Kraj liste u okviru contenta Laka industrija-->
+
+                        <li><a href="#">Teška hemijska industrija </a></li>
+                        <ul class="a"> <!--Pocetak liste u okviru kontenta Teska industrija-->
+                            <li><a href="građevina.html">Građevina </a></li>
+                            <li><a href="elektroind.html">Elektroindustrija </a> </li>
+                            <li><a href="metalindustrija.html">Metalna industrija </a> </li>
+                            <li><a href="naftaind.html">Naftna industrija </a> </li>
+                            <li><a href="nuklearnaind.html">Nuklearna industrija </a> </li>
+                            <li><a href="prehrambenaind.html">Prehrambena industrija </a> </li>
+                            <li><a href="pirotehnika.html">Pirotehnika </a> </li>
+                            <li><a href="poljoprivreda.html">Poljoprivreda </a> </li>
+                            <li><a href="tehnologija-vode.html">Tehnologija vode </a></li>
+
+                        </ul> <!--Kraj liste u okviru kontenta Teska industrija-->
+
+                        <li><a href="medicina.html">Medicina </a></li>
+
+                        <ul class="a"> <!--Pocetak liste u okviru content Medicina-->
+                            <li><a href="biohemija.html">Biohemija </a> </li>
+                            <li><a href="stomatologija.html">Stomatologija </a> </li>
+                            <li><a href="veterina.html">Veterina </a> </li>
+                        </ul> <!--Kraj liste u okviru contenta Medicina-->
+
+
+                    </ul> <!--Kraj glavne liste Primena-->
+                </div> <!--Kraj diva kontent Primena -->
+            </div> <!--Kraj diva dugme Primena-->
+
+
+            <div class="dropdown"> <!---Pocetak dropdown menija Kontakt--->
+                
+                <button class="dropbtn"><a href="kontakt.html">Kontakt </a> </button>
+               
+            </div> <!--Kraj diva dropbtn Kontakt-->
+
+            <button> <a href="log in.html"> Uloguj se</a></button>
+
+            <button> <a href="sign-up.html">Kreiraj nalog</a></button>
+            
+        </div> <!--Kraj diva dropdown-->
+
+    </div> <!--Kraj diva cointainer-->
+
+    </div><!--Kraj diva nav-bar-->
+    <div id="logo-header">
+        <div class="container">
+            <div class="logo-circle"> <!--Pocetak diva logo-circle-->
+
+                <span class="logo-text">
+                    <p> CHEMICALS</p>
+                </span>
+                
+
+            </div> <!--Kraj diva logo-circle-->
+        </div><!--Kraj diva container-->
+    </div><!--Kraj diva logo-header-->
+
+    <div id="main-chemical"> <!--Pocetak main chemical -->
+        <div class="container">
+           
+           <div class="slogan">
+                       <h1> Originalna industrijska rešenja </h1>
+                    <!--Pocetak diva class slideshow da se uvede senka na background image-->
+                       <p> CHEMICALS kompanija posluje više od deset godina na tržištu širom sveta <br> i spada u jednu od vodećih distribucionih organizacija za industrije širom Srbije. </p>
+                </div> <!--Kraj diva slogan-->
+
+      
+
+
+        </div> <!--Kraj diva sa klasom container-->
+    </div> <!--Kraj diva sa id main-chemical-->
+
+    
+    <div id="intro"> <!--Pocetak diva intro-->
+        
+        <div class="container"><!--Pocetak container taga-->
+            <form> <!--Form tag u jquery sluzi za animacije, da se skroluje preko linka na jednoj istoj stranici, tekst koji se nalazi pre form taga nam govori do kog dela stranice skroluje preko animacije , biramo kako zelimo gde da nam skroluje u zavisnosti o kontetna u nekom divu, to moze biti pre pocetka diva do kog zelimo da se skroluje ili na kraju tog diva-->
+
+                <a href="#DivIdToScroll"> <!--Link sa id DivToScroll , vezano za animaciju u JQUERY-->
+                    <div id="btnLink" onClick="generateReport();"> </div> <!--Div sa id btn link poziv f-je dugmeta u Jquery-->
+                </a>
+        
+                <div id="DivIdToScroll"></div><!--Div sa id DivToScroll -->
+        
+        
+        </form> <!--Kraj form taga-Jquery-->
+            <div class="intro-img"> <!--Pocetak diva sa klasom intro-img-->
+                <h2> O nama</h2>
+                
+                
+            <img src="team-work_618x412.jpeg" alt="team-work">
+            <div class="intro-text"> <!--Div sa klasom intro-text,  text unutar diva intro-->
+
+
+                <p>CHEMICALS kao jedna od vodećih distribucionih kompanija posluje <br> u preko 30 zemalja širom sveta i nastavlja progresivno da se razvija na tržištu širom Srbije, Evrope, SAD , Azije i Afrike.</p>
+
+
+
+            </div> <!--Kraj diva sa klasom-intro-text-->
+
+
+        </div> <!--Kraj diva sa klasom intro-img-->
+    </div>
+
+
+    </div> <!--Kraj diva sa klsom container-->
+    </div> <!--Kraj diva sa klasom intro-->
+
+    <form><!--Pocetak nove forme, skrolovanje na drugi link preko jquery-->
+    
+        <a href="#ScrollTop"><!--Link sa ID ScrollTop vezano za JQUERY-->
+            <div id="btnLink" onClick="generateReport2();"> </div><!--Pocetak kraj diva sa id btnlink za poziv f-je dugmeta u JQUERY-->
+        </a>
+
+        <div id="ScrollTop"></div><!--Pocetak i kraj diva sa id ScrollTop-->
+
+
+</form> <!--Kraj form taga vezano za JQUERY-->
+
+    <div id="vizija"> <!--Pocetak diva sa klasom vizija-->
+        <div class="container"> <!--Pocetak container taga-->
+
+            <div class="vizija-text"> <!--Pocetak diva sa klasoom vizija text-->
+                <h2> Mi stvaramo viziju i misiju</h2>
+
+               
+                
+               
+                <p> Sa našim jedinstvenim industrijskim rešenjima pružamo usluge za održiv razvoj svih industrija. Orijentisanim pristupom prema našim klijentima obezbeđujemo preko 100  kvalitetnih hemikalija sa visokim stepenom čistoće, koji zadovoljavaju visoke kriterijume prema ISO standardima analitičkih reagenasa. </p>
+            </div> <!--Kraj diva sa klasom vizija-text-->
+                <div class="vizija-img">  <!--Pocetak diva sa klasom vizija-img-->
+                    <img src="model molekula_810x540_394x263.jpeg" alt="vizija-slika">
+                </div> <!---Kraj diva sa klasom vizija-img-->
+            </div>   <!--Kraj diva sa klasom container-->
+            
+    </div> <!--Kraj diva sa id vizija-->
+    
+           
+    <form><!--Pocetak nove forme, skrolovanje na drugi link preko jquery-->
+    
+        <a href="#ScrollBottom"><!--Link sa ID ScrollTop vezano za JQUERY-->
+            <div id="btnLink" onClick="generateReport3();"> </div><!--Pocetak kraj diva sa id btnlink za poziv f-je dugmeta u JQUERY-->
+        </a>
+    
+        <div id="ScrollBottom"></div><!--Pocetak i kraj diva sa id ScrollBottom-->
+    
+    
+    </form> <!--Kraj form taga vezano za JQUERY-->
+    
+
+<div id="karijera"> <!--Pocetak diva sa klasom karijera-->
+    <div class="container"> <!--Pocetak container taga-->
+
+        <div class="karijera-text"> <!--Pocetak diva sa klasoom karijera- text-->
+            <h2> Karijera</h2>
+
+            <p> Naš tim čine mladi, stručni, ambiciozni i proaktivni ljudi posvećeni kreativnim biznis idejama koje će pouzdano zadovoljiti usluge naših klijenata. Sa zadovoljstvom pridruži nam se i TI. Pošalji nam svoj CV na našu mail adresu i u kratkom roku očekuj naš poziv.</p>
+        </div> <!--Kraj diva sa klasom karijera-text-->
+            <div class="karijera-img">  <!--Pocetak diva sa klasom karijera-img-->
+                <img src="slika-karijera_547x364_394x262.jpeg">
+            </div> <!---Kraj diva sa klasom karijera-img-->
+        </div>   <!--Kraj diva sa klasom cointainer-->
+        
+       
+
+ 
+</div> <!--Kraj diva sa klasom karijera-->
+
+
+
+
+
+
+
+
+    <div id="footer"> <!--Pocetak diva sa id footer-->
+        <div class="container">
+            <div class="footer-text"> <!--Pocetak diva sa klasom footer-text-->
+                <span  class="address"> Jurija Gagarina 36, 11070, Novi Beograd </span>
+                
+                <address>  <img src="mail.png" alt="slika-mail"> <a href="mailto:chemical@distribution.com">  <span class="address" >  chemicals@chemistry.com  </span> </a> 
+                </br>
+              <img src="phone.png" alt="slika-phone">   <a href="tel:+381659600516">
+                  <span class="address" > +381 65 9600 516  </span>   </a> </address> </br>
+                 <img src="instagram_2111463.png"> <a href="#"></a>
+                 <img src="whatsapp_733585.png"> <a href="#"></a>
+                 <img src="facebook_733547.png"> <a href="#"></a>
+
+
+
+                 
+          
+            </div> <!--Kraj diva footer-text--> <!--Kontainer tag-->
+
+
+            
+                
+           
+        
+                
+           
+
+           
+        <span class="address"> Personal Data Protection</br>
+             Cookie Policy</span>
+    </div> <!--Kraj diva sa klasom container-->
+</div> <!--Kraj diva sa id footer-->
+
+
+    <script>
+        
+            function generateReport() {
+                $('html, body').animate({
+                    scrollTop: $("#DivIdToScroll").offset().top
+                }, 1000);
+                
+                
+            };
+            function generateReport2() {
+
+            $('html, body').animate({
+                scrollTop: $("#ScrollTop").offset().top
+                }, 1000);
+           
+            };
+            function generateReport3() {
+
+$('html, body').animate({
+    scrollTop: $("#ScrollBottom").offset().top
+    }, 1000);
+
+};
+
+
+
+
+        
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
